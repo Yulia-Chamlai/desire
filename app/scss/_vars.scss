@@ -1,0 +1,27 @@
+$main-font:'Open Sans', sans-serif;
+$secondary-font:'Montserrat', sans-serif;
+
+$footer-bglight:#DFDFDF;
+$dark:#363838;
+$gray:#5A5A5A;
+$gray-line:#6D7278;
+$accent-color:#FFEF35;
+$white:#ffffff;
+
+%title-fonts{
+    font-family: $secondary-font;
+    color: $dark;
+    font-size: 36px;
+    font-weight: 700;
+    line-height: 60px;
+    }
+%decor-line{
+    position: absolute;
+    content: '';
+    background-color: $gray-line;
+    height: 1px;
+    width: 252px;
+    bottom: 0;
+    left: 0; 
+    right: 0;
+}
