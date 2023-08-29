@@ -11,16 +11,30 @@ closeBtn.addEventListener('click', function () {
     rightsideMenu.classList.remove('rightside-show');
 });
 $('.top-slider').slick({
-    dots: true,
-    arrows: false,
-    fade: true,
-    autoplay: true,
-    autoplaySpeed: 3000,
-  });
-  var mixer = mixitup('.gallery__inner', {
-    load:{
-        filter: '.living'
-    }
-  });
+dots: true,
+arrows: false,
+fade: true,
+autoplay: true,
+autoplaySpeed: 3000,
+});
+
+$('.contacts__slider').slick({
+dots: true,
+arrows: false,
+});
+
+$('.blog-slider').slick({
+dots: false,
+arrows: true,
+prevArrow: '<button class="prev-btn"><img src="../images/src/back.svg" alt="back arrow"></button>',
+nextArrow: '<button class="next-btn"><img src="../images/src/next.svg" alt="next arrow"></button>',
+});
     
-  
+
+
+var mixer = mixitup('.gallery__inner', {
+load:{
+    filter: '.living'
+}
+});
+    
