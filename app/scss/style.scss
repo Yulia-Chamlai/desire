@@ -1000,9 +1000,7 @@ margin-bottom: 80px;
         margin-bottom: 23px;
         display: block;
         position: relative;
-        &::before{
-            position: absolute;
-            content: '';
+        &::before{            
             @extend %decor-line;
             width: 200px;
             height: 1px;
@@ -1191,14 +1189,20 @@ margin-bottom: 80px;
         display: inline-block;
     }
 }
-.aside-tag {
-    &__list{
-        display: flex;
-        max-width: 349px;
-        width: 100%;
-        flex-wrap: wrap;
+.aside-tag {   
+    &__list{       
     }
-    &__link {
+    &__title{
+        @extend %title-fonts;
+        font-size: 16px;
+        line-height: 23px;
+        display: block;
+        margin-bottom: 15px;
+    }
+    &__item{
+        display: inline-block;
+    }
+    &__link {       
         color: #8F8D8D;
         text-align: center;
         font-weight: 600;
@@ -1209,5 +1213,175 @@ margin-bottom: 80px;
         padding: 0 16px;
         margin-right: 9px;
         margin-bottom: 10px;
+    }
+}
+.posts {
+    &__inner {
+        display: flex;
+    }
+}
+
+.posts-content {
+    max-width: 730px;
+    margin-right: 30px;
+    &__quote {
+        padding: 40px 42px 30px;
+        background-color: transparent;
+        max-width: 644px;
+        width: 100%;
+      
+    }
+    &__quote-text {
+        display: block;
+        position: relative;
+        padding-bottom: 23px;
+        margin-bottom: 23px;     
+       
+        &::before{
+            @extend %decor-line;
+            width: 177px;
+            height: 1px;
+        }
+    }
+    &__quote-author {
+        @extend %title-fonts;
+        font-size: 16px;
+        line-height: 22px;
+        color: rgba(54, 56, 56, 0.90);
+    }
+    .article{
+        &__text {
+            margin-bottom: 0;
+        }
+    }
+}
+.posts-tag{
+    margin-bottom: 40px;
+    &__title{
+        @extend %title-fonts;
+        font-size: 16px;
+        line-height: 23px;
+        display: block;
+        margin: 50px 0 15px;
+    }
+    &__list{
+        display: flex;
+        gap: 23px;
+    }
+    &__link{
+        color: #8F8D8D;
+        text-align: center;
+        font-weight: 600;
+        font-family: $main-font;
+        font-size: 14px;
+        border-radius: 14px;
+        border: 1px solid rgba(#454647, 0.5);
+        padding: 0 16px;
+        margin-right: 9px;
+    }
+}
+
+.posts-comment {
+    margin-bottom: 105px;
+    &__title {
+        @extend %title-fonts;
+        font-size: 20px;
+        line-height: 31px;
+        margin-bottom: 9px;
+    }
+    &__content {
+        display: flex;
+    }
+    &__img {
+        width: 64px;
+        height: 64px;
+        border-radius: 50%;
+        margin-right: 13px;
+    }
+    &__author-info{
+        margin-bottom: 40px;
+    }
+    &__author-name {
+        @extend %title-fonts;
+        font-size: 16px;
+        line-height: 23px;
+    }
+    &__author-date {
+        font-size: 14px;
+        color: #A1A1A1;
+        margin-bottom: 10px;
+    }
+
+    &__author-text {
+        max-width: 650px;
+        width: 100%;
+        color: #5A5A5A;
+    }
+
+    &__form {
+        max-width: 730px;
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    &__text {
+        @extend %title-fonts;
+        font-size: 16px;
+        line-height: 23px;
+    }
+    &__area {
+        width: 100%;
+        min-height: 125px;
+        resize: none;
+        border-radius: 24px;
+        border: 1px solid #DFDFDF;
+        padding: 14px 15px;
+        margin-bottom: 12px;
+        &::placeholder{
+            color: #A1A1A1;
+            font-family: $main-font;
+            font-size: 16px;            
+            font-weight: 400;
+            line-height: 27px;
+        }
+    }
+
+    &__name,
+    &__email {
+        width: 48%;
+        border-radius: 20px;
+        border: 1px solid #DFDFDF;
+        padding: 6px 15px;
+        &::placeholder{
+            color: #A1A1A1;
+            font-family: $main-font;
+            font-size: 16px;            
+            font-weight: 400;
+            line-height: 27px;
+        }
+    }
+    &__name{
+        margin-right: 10px;
+    }
+    
+    &__form-checkbox {
+        margin-top: 28px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        label{
+            margin-left: 11px;
+        }
+    }
+    &__btn {
+        max-width: 140px;
+        width: 100%;
+        padding: 6px 14px;
+        background-color: $dark;
+        color: #FFFFF0;
+        font-weight: 600;
+        border-radius: 21px;
+        margin-top: 21px;
     }
 }
