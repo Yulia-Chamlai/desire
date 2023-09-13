@@ -10,6 +10,11 @@ closeBtn.addEventListener('click', function () {
     rightsideMenu.classList.add('rightside-hide');
     rightsideMenu.classList.remove('rightside-show');
 });
+$('.menu__btn-menu').on('click', function(){
+    $('.header__nav').toggleClass('open');
+});
+
+
 $('.top-slider').slick({
 dots: true,
 arrows: false,
