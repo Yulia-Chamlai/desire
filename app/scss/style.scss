@@ -936,21 +936,21 @@ margin-bottom: 80px;
     }
 
     &__slider-items {
-        display: flex;
+        display: flex !important;
+        flex-wrap: wrap;
+        gap: 18px;
+        justify-content: center;
     }
 
     &__item {  
-        position: relative; 
-        margin-right: 18px;    
+        position: relative;           
         &:hover{
             .contacts__item-text{
                opacity: 1;
             }
            }
     }
-    &__item + &__item{
-        margin-right: 18px;
-    }
+    
     &__item-img {
         width: 170px;
         height: 170px;
@@ -1611,6 +1611,23 @@ margin-bottom: 80px;
             max-width: 600px;
         }
     }
+    .contacts{
+        &__item{
+            max-width: 220px;
+            width: 100%;
+        }
+        &__item-img{
+            max-width: 220px;
+            width: 100%;
+            height: auto;
+        }
+        &__btn{
+            margin-bottom: 50px;
+        }
+        &__slider{
+            margin-bottom: 50px;
+        }
+    }
 }
 @media(max-width:1005px){
     .footer{
@@ -1713,6 +1730,30 @@ margin-bottom: 80px;
             padding: 0 10px;
         }
     }
+    .contacts{
+        &__inner{
+           margin-left: 0;
+        }
+        &__form{
+            max-width: 100%;
+        }
+        &__input-name,
+        &__input-email{
+            max-width: 50%;
+            min-width: 0;
+            width: 100%;
+        }
+        
+        &__item{
+                max-width: 250px;
+                width: 100%;
+        }
+        &__item-img{
+                max-width: 100%;
+                
+        }
+        
+    }
 }
 @media(max-width:800px){
     .footer{
@@ -1779,6 +1820,11 @@ margin-bottom: 80px;
         }
         &__info-text {
             padding-left: 100px;            
+        }
+    }
+    .contacts{
+        &__item{
+            max-width: 48%;
         }
     }
 }
@@ -1965,6 +2011,15 @@ margin-bottom: 80px;
         &-slider .next-btn,
         &-slider .prev-btn{
             top: 143px;
+        }
+    }
+    .contacts{
+        &__item{
+            max-width: 100%;
+        }
+        &__input-name,
+        &__input-email{
+            max-width: 100%;            
         }
     }
 }
